@@ -52,7 +52,8 @@
     "dev": "npm run clean && rollup -c -w",
     "prepublish": "npm run build",
     "prettier": "prettier --check .",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "test:ci": "firebase emulators:exec 'npx jest --forceExit'"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
