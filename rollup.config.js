@@ -25,7 +25,7 @@ const pkgsByName = {
 };
 
 const plugins = [
-  resolveModule(),
+  resolveModule({preferBuiltins: false}),
   typescript({
     typescript: require('typescript'),
   }),

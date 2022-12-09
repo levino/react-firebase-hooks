@@ -89,5 +89,6 @@
     "firebase": ">= 9.0.0",
     "react": ">= 16.8.0"
   },
-  "typings": "index.d.ts"
+  "typings": "index.d.ts",
+  "packageManager": "yarn@3.3.0"
 }
