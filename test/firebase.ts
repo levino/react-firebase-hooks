@@ -1,8 +1,14 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import {
+  connectFirestoreEmulator,
+  initializeFirestore,
+} from 'firebase/firestore';
 
 export const app = initializeApp({ projectId: 'demo-noop' });
 
-export const db = getFirestore(app);
+export const db = initializeFirestore(app, {
+  experimentalAutoDetectLongPolling: true,
+  useFetchStreams: false,
+});
 
-connectFirestoreEmulator(db, 'localhost', 8080);
+connectFirestoreEmulator(db, '127.0.0.1', 8080);
